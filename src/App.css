@@ -1,0 +1,82 @@
+#root {
+  position: relative;
+  overflow: hidden;
+  background-image: url("./assets/saint-antonien-2000w.webp");
+  height: 100vh;
+  width: 100vw;
+}
+.full-screen {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+}
+.buttons {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+}
+.slider-container {
+  height: 30%;
+  width: 40%;
+  border: 2px solid white;
+  overflow: hidden;
+}
+.card-slider {
+  position: fixed;
+  z-index: 50;
+  left: 60%;
+  top: 400px;
+  height: 400px;
+  display: flex;
+}
+.image-card {
+  border-radius: 15px;
+  margin: 0 1rem 0 1rem;
+  min-height: 400px;
+  min-width: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.NavBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  color: white;
+  display: flex;
+  width: 100vw;
+  background-color: transparent;
+}
+.NavBar ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
