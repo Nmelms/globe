@@ -9,6 +9,17 @@
   font-family: "Abel", sans-serif;
   font-family: "Lato", sans-serif;
 }
+.bar-wrapper {
+  position: absolute;
+  width: 30vw;
+  left: 60%;
+  bottom: 17%;
+  z-index: 50;
+}
+.bar {
+  min-width: 80% !important;
+  height: 5px !important;
+}
 
 .buttons {
   position: absolute;

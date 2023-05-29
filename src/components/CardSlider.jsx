@@ -4,12 +4,11 @@ import { library } from "@fortawesome/fontawesome-svg-core"
 import { fas } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-export default function CardSlider({ images }) {
+export default function CardSlider({ images, num, setNum }) {
   library.add(fas)
 
   gsap.registerPlugin(Flip)
   const myDivRefs = useRef([])
-  const [num, setNum] = useState(0)
 
   const handleClick = () => {
     let state = Flip.getState(myDivRefs.current[num])
