@@ -1,6 +1,7 @@
 import { useState, useRef } from "react"
 import NavBar from "./components/navBar"
 import CardSlider from "./components/CardSlider"
+import SliderBtns from "./components/SliderBtns"
 import Bar from "./components/Bar"
 import { gsap } from "gsap"
 
@@ -8,6 +9,7 @@ import "./App.css"
 
 function App() {
   const [num, setNum] = useState(0)
+  const myDivRefs = useRef([])
   let imgArr = [
     { url: "src/assets/cappadocia-2000w.webp", title: "NORTH CAROLINA" },
     { url: "src/assets/japan-alps-2000w.webp", title: "SOUTH CAROLINA" },
@@ -19,9 +21,21 @@ function App() {
 
   return (
     <>
-      <div className="slider-wrapper">
-        <CardSlider num={num} setNum={setNum} images={images}></CardSlider>
-        <Bar num={num} imgArr={imgArr}></Bar>
+      <div className="slider-wrapper container row ">
+        <CardSlider
+          myDivRefs={myDivRefs}
+          num={num}
+          setNum={setNum}
+          images={images}
+        ></CardSlider>
+        <div className="bottom-wrapper d-flex">
+          <SliderBtns
+            num={num}
+            setNum={setNum}
+            myDivRefs={myDivRefs}
+          ></SliderBtns>
+          <Bar num={num} imgArr={imgArr}></Bar>
+        </div>
       </div>
     </>
   )
