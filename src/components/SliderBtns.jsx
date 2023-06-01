@@ -8,7 +8,7 @@ export default function SliderBtns({ myDivRefs, num, setNum }) {
   const handleClick = () => {
     const updatedNum = num + 1
     setNum(updatedNum)
-
+    // myDivRefs.current[num + 1].classList.add("absolute")
     const state = Flip.getState(myDivRefs.current[num])
     const state2 = Flip.getState(myDivRefs.current[num + 1])
     const state3 = Flip.getState(myDivRefs.current[num + 2])
@@ -16,10 +16,10 @@ export default function SliderBtns({ myDivRefs, num, setNum }) {
 
     myDivRefs.current[num].classList.add("full-screen")
 
-    Flip.from(state, { duration: 10 })
-    Flip.from(state2, { duration: 10, ease: "back.out(1)", delay: 0.005 })
-    Flip.from(state10, { duration: 10, ease: "back.out(1)", delay: 0.05 })
-    Flip.from(state4, { duration: 10, ease: "back.out(1)", delay: 0.1 })
+    Flip.from(state, { duration: 0.5 })
+    Flip.from(state2, { duration: 0.5, ease: "back.out(1)", delay: 0.005 })
+    Flip.from(state3, { duration: 0.5, ease: "back.out(1)", delay: 0.05 })
+    Flip.from(state4, { duration: 0.5, ease: "back.out(1)", delay: 0.1 })
   }
 
   const handlePrevClick = () => {
@@ -33,10 +33,14 @@ export default function SliderBtns({ myDivRefs, num, setNum }) {
 
     myDivRefs.current[updatedNum].classList.remove("full-screen")
 
-    Flip.from(state, { duration: 10 })
-    Flip.from(state2, { duration: 10 })
-    Flip.from(state3, { duration: 10 })
-    Flip.from(state4, { duration: 10 })
+    Flip.from(state, {
+      duration: 0.5,
+      scale: true,
+    })
+
+    Flip.from(state2, { duration: 0.5 })
+    Flip.from(state3, { duration: 0.5 })
+    Flip.from(state4, { duration: 0.5 })
   }
 
   return (
