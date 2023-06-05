@@ -11,8 +11,16 @@ function App() {
   const [num, setNum] = useState(0)
   const myDivRefs = useRef([])
   let imgArr = [
-    { url: "src/assets/cappadocia-2000w.webp", title: "NORTH CAROLINA" },
-    { url: "src/assets/japan-alps-2000w.webp", title: "SOUTH CAROLINA" },
+    {
+      url: "src/assets/cappadocia-2000w.webp",
+      subTitle: "Göreme Valley",
+      title: "North Carolina - United States",
+    },
+    {
+      url: "src/assets/japan-alps-2000w.webp",
+      subTitle: "Marrakech Merzouga",
+      title: "South Dakota - United States",
+    },
     { url: "src/assets/los-lances-2000w.webp" },
     { url: "src/assets/morocco-2000w.webp" },
     { url: "src/assets/mushroom.jpeg", title: "AMANITA MUSCARIA" },

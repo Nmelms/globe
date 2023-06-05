@@ -62,6 +62,7 @@
   overflow: hidden;
 }
 .card-slider {
+  left: 30%;
   position: relative;
   z-index: 100;
   max-width: 500px;
@@ -104,7 +105,9 @@
   transform: translateX(-282px);
 }
 div.image-card.full-screen {
-  justify-content: center;
+  justify-content: flex-start;
+  margin: 0;
+  border-radius: 0;
 }
 p {
   height: 0px;
@@ -114,30 +117,40 @@ p {
 }
 div.image-card.full-screen p {
   font-size: 1rem;
-  transition: height 0.5s ease-in;
-  transition-delay: 0.25s;
-  height: 100px;
+  transition: height 0.25s ease-in;
+  transition-delay: 0.15s;
+  height: 50px;
   min-height: fit-content;
-  position: absolute;
-  bottom: 65%;
+  position: relative;
   display: block;
   width: 100%;
 }
-div.image-card.full-screen .title {
+.full-screen .card-text {
+  height: fit-content !important;
+}
+div.image-card.full-screen {
+  display: flex;
+  flex-direction: column;
+}
+div.image-card.full-screen .info-block {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 40px;
-  justify-content: center;
-  position: absolute;
+  text-align: center;
+  width: 100vw;
+  position: relative;
   top: 5%;
   height: fit-content;
   padding: 1rem 1rem 1rem 4rem;
 }
-div.image-card.full-screen .title h1 {
+div.image-card.full-screen .info-block h1 {
   font-size: 30px;
 }
-.title h1 {
+.info-block h1 {
   font-size: 1rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  width: 30%;
   position: relative;
   bottom: 0;
   color: white;
@@ -179,6 +192,14 @@ div.image-card.full-screen .title h1 {
     height: 350px;
     max-width: 500px;
     display: flex;
+  }
+  .card-title {
+    font-size: 8px;
+    height: auto;
+    width: 100vw;
+  }
+  .card-subTitle {
+    width: 100%;
   }
   .image-card {
     box-shadow: rgb(0, 0, 0) 15px 15px 50px;

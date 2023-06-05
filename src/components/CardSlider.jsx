@@ -9,21 +9,22 @@ export default function CardSlider({ images, num, setNum, myDivRefs }) {
 
   return (
     <>
-      <div className="card-slider d-flex col-12">
+      <div className="card-slider container d-flex col-12">
         {images.map((image, index) => (
           <div
             ref={(element) => (myDivRefs.current[index] = element)}
             style={{ backgroundImage: `url(${image.url})` }}
             className="image-card"
           >
-            <div className="title w-50 ps-4">
-              <h1>{image.title}</h1>
+            <div className="info-block ps-4">
+              <p className="card-title">{image.title}</p>
+              <h1 className="card-subTitle">{image.subTitle}</h1>
+              <p className="card-text px-2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus soluta vel, doloremque qui, ipsum blanditiis libero
+                eius corporis rem eveniet excepturi necessitatibus iste.
+              </p>
             </div>
-            <p className="px-2">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Repellendus soluta vel, doloremque qui, ipsum blanditiis libero
-              eius corporis rem eveniet excepturi necessitatibus iste.
-            </p>
           </div>
         ))}
       </div>
