@@ -16,10 +16,10 @@ export default function SliderBtns({ myDivRefs, num, setNum }) {
 
     myDivRefs.current[num].classList.add("full-screen")
 
-    Flip.from(state, { duration: 0.5 })
-    Flip.from(state2, { duration: 0.5, ease: "back.out(1)", delay: 0.005 })
-    Flip.from(state3, { duration: 0.5, ease: "back.out(1)", delay: 0.05 })
-    Flip.from(state4, { duration: 0.5, ease: "back.out(1)", delay: 0.1 })
+    Flip.from(state, { duration: 0.3 })
+    Flip.from(state2, { duration: 0.3, ease: "back.out(1)", delay: 0.005 })
+    Flip.from(state3, { duration: 0.3, ease: "back.out(1)", delay: 0.05 })
+    Flip.from(state4, { duration: 0.3, ease: "back.out(1)", delay: 0.1 })
   }
 
   const handlePrevClick = () => {
@@ -34,17 +34,18 @@ export default function SliderBtns({ myDivRefs, num, setNum }) {
     myDivRefs.current[updatedNum].classList.remove("full-screen")
 
     Flip.from(state, {
-      duration: 0.5,
+      duration: 0.3,
       scale: true,
+      ease: "back.out(1)",
     })
 
-    Flip.from(state2, { duration: 0.5 })
-    Flip.from(state3, { duration: 0.5 })
-    Flip.from(state4, { duration: 0.5 })
+    Flip.from(state2, { duration: 0.3, ease: "back.out(1)" })
+    Flip.from(state3, { duration: 0.3, ease: "back.out(1)" })
+    Flip.from(state4, { duration: 0.3, ease: "back.out(1)" })
   }
 
   return (
-    <div className="buttons d-flex col-4 align-items-center">
+    <div className="buttons d-flex col-12 justify-content-center align-items-center">
       <button
         className="slider-btn d-flex align-items-center justify-content-center mx-4 col-1"
         onClick={() => handlePrevClick()}

@@ -21,22 +21,22 @@ function App() {
 
   return (
     <>
-      {/* <div className="slider-wrapper container row "> */}
-      <CardSlider
-        myDivRefs={myDivRefs}
-        num={num}
-        setNum={setNum}
-        images={images}
-      ></CardSlider>
-      <div className="bottom-wrapper d-flex">
-        <SliderBtns
+      <div className="slider-wrapper ">
+        <CardSlider
+          myDivRefs={myDivRefs}
           num={num}
           setNum={setNum}
-          myDivRefs={myDivRefs}
-        ></SliderBtns>
-        <Bar num={num} imgArr={imgArr}></Bar>
+          images={images}
+        ></CardSlider>
+        <div className="bottom-wrapper d-flex justify-content-center container row">
+          <Bar num={num} imgArr={imgArr}></Bar>
+          <SliderBtns
+            num={num}
+            setNum={setNum}
+            myDivRefs={myDivRefs}
+          ></SliderBtns>
+        </div>
       </div>
-      {/* </div> */}
     </>
   )
 }

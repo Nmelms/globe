@@ -2,7 +2,7 @@ import ProgressBar from "react-bootstrap/ProgressBar"
 
 function Bar({ imgArr, num }) {
   return (
-    <div className="bar-wrapper d-flex align-items-center col-8">
+    <div className="bar-wrapper pt-2 d-flex justify-content-center align-items-center col-12 m-0 px-4">
       <ProgressBar
         widith={75}
         className="bar"
@@ -11,7 +11,7 @@ function Bar({ imgArr, num }) {
         max={imgArr.length}
         now={num}
       />
-      <h2 className="text-white p-4">{num}</h2>
+      <h2 className="text-white px-3">{num}</h2>
     </div>
   )
 }
