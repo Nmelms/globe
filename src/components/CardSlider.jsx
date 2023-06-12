@@ -30,7 +30,8 @@ export default function CardSlider({
                 <p className="card-title">{image.title}</p>
               </div>
 
-              <p className="small-title">{image.title}</p>
+              <p className="small-title1">{image.title}</p>
+              <p className="small-title2">{image.subTitle}</p>
               <div className="subTitle-div">
                 <h1 className="card-subTitle">{image.subTitle}</h1>
               </div>

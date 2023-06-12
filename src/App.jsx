@@ -23,9 +23,24 @@ function App() {
       subTitle: "Marrakech Merzouga",
       title: "South Dakota - United States",
     },
-    { url: "src/assets/los-lances-2000w.webp" },
-    { url: "src/assets/morocco-2000w.webp" },
-    { url: "src/assets/mushroom.jpeg", title: "AMANITA MUSCARIA" },
+    {
+      url: "src/assets/los-lances-2000w.webp",
+      subTitle: "Göreme Valley",
+      smallTitle: "Göreme Valley",
+      title: "North Carolina - United States",
+    },
+    {
+      url: "src/assets/morocco-2000w.webp",
+      subTitle: "Göreme Valley",
+      smallTitle: "Göreme Valley",
+      title: "North Carolina - United States",
+    },
+    {
+      url: "src/assets/mushroom.jpeg",
+      subTitle: "Göreme Valley",
+      smallTitle: "Göreme Valley",
+      title: "North Carolina - United States",
+    },
   ]
   const [images, setImages] = useState(imgArr)
 
