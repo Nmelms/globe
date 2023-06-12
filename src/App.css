@@ -14,6 +14,19 @@
   font-family: "Abel", sans-serif;
   font-family: "Lato", sans-serif;
 }
+.card-title {
+  transform: translateY(70px);
+  color: white;
+  font-size: 1rem;
+}
+.full-screen .card-title {
+  transform: translateY(0px);
+  transition: transform 0.5s;
+}
+.card-subTitle {
+  text-transform: uppercase;
+  padding: 0.5rem;
+}
 .bottom-wrapper {
   width: 100%;
   position: relative;
@@ -70,11 +83,12 @@
 }
 
 .image-card {
+  overflow: hidden;
   box-shadow: rgb(0, 0, 0) 15px 15px 50px;
   border-radius: 15px;
   margin: 0 1rem 0 1rem;
   min-width: 150px;
-
+  position: relative;
   max-width: 150px;
   object-fit: contain;
   height: 200px;
@@ -98,6 +112,9 @@
   min-width: 100vw;
   width: 100vw;
 }
+.image-card.full-screen .small-title {
+  display: none;
+}
 .absolute {
   position: absolute;
 }
@@ -109,13 +126,13 @@ div.image-card.full-screen {
   margin: 0;
   border-radius: 0;
 }
-p {
+/* p {
   height: 0px;
   overflow: hidden;
   color: white;
   width: 30%;
-}
-div.image-card.full-screen p {
+} */
+/* div.image-card.full-screen p {
   font-size: 1rem;
   transition: height 0.25s ease-in;
   transition-delay: 0.15s;
@@ -124,15 +141,30 @@ div.image-card.full-screen p {
   position: relative;
   display: block;
   width: 100%;
+} */
+.card-text {
+  font-size: 1rem;
+  color: white;
+  transform: translateY(70px);
 }
 .full-screen .card-text {
+  transform: translateY(0);
+  transition: transform 0.5s;
+  transition-delay: 0.3s;
   height: fit-content !important;
 }
 div.image-card.full-screen {
   display: flex;
   flex-direction: column;
 }
+.info-block {
+  overflow: hidden;
+  height: 0;
+  max-height: 0;
+}
 div.image-card.full-screen .info-block {
+  max-height: 500px;
+  height: fit-content;
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
@@ -142,17 +174,33 @@ div.image-card.full-screen .info-block {
   width: 100vw;
   position: relative;
   top: 5%;
-  height: fit-content;
   padding: 1rem 1rem 1rem 4rem;
 }
+.title-div {
+  overflow: hidden;
+}
+.subTitle-div {
+  overflow: hidden;
+}
+.text-div {
+  overflow: hidden;
+}
 div.image-card.full-screen .info-block h1 {
+  transform: translateY(0px);
+  transition: transform 0.5s;
+  transition-delay: 0.15s;
   font-size: 30px;
+  height: fit-content;
+  max-height: 100px;
 }
 .info-block h1 {
-  font-size: 1rem;
+  transform: translateY(70px);
+  overflow: hidden;
+  height: 0;
+  max-height: 0;
+  font-size: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;
-  bottom: 0;
   color: white;
 }
 .NavBar {
@@ -169,6 +217,13 @@ div.image-card.full-screen .info-block h1 {
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+.small-title {
+  font-size: 1rem;
+  max-width: 100%;
+  position: absolute;
+  bottom: 5%;
+  color: white;
 }
 @media screen and (min-width: 900px) {
   .bottom-wrapper {
@@ -202,6 +257,7 @@ div.image-card.full-screen .info-block h1 {
     width: 100%;
   }
   .image-card {
+    position: relative;
     box-shadow: rgb(0, 0, 0) 15px 15px 50px;
     border-radius: 15px;
     margin: 0 1rem 0 1rem;

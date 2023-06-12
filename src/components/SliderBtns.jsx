@@ -2,10 +2,15 @@ import React, { useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { gsap } from "gsap"
 
-export default function SliderBtns({ myDivRefs, num, setNum }) {
+export default function SliderBtns({ myDivRefs, num, setNum, infoRefs }) {
   gsap.registerPlugin(Flip)
 
   const handleClick = () => {
+    // const element = document.querySelectorAll(".info-block")
+    // element.style.height = "min-content"
+    // console.log(element.style.height)
+    // infoRefs.current[num].style.height = "500px"
+
     const updatedNum = num + 1
     setNum(updatedNum)
     // myDivRefs.current[num + 1].classList.add("absolute")

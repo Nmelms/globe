@@ -4,7 +4,13 @@ import { library } from "@fortawesome/fontawesome-svg-core"
 import { fas } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-export default function CardSlider({ images, num, setNum, myDivRefs }) {
+export default function CardSlider({
+  images,
+  num,
+  setNum,
+  myDivRefs,
+  infoRefs,
+}) {
   library.add(fas)
 
   return (
@@ -16,14 +22,26 @@ export default function CardSlider({ images, num, setNum, myDivRefs }) {
             style={{ backgroundImage: `url(${image.url})` }}
             className="image-card"
           >
-            <div className="info-block ps-4">
-              <p className="card-title">{image.title}</p>
-              <h1 className="card-subTitle">{image.subTitle}</h1>
-              <p className="card-text px-2">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Repellendus soluta vel, doloremque qui, ipsum blanditiis libero
-                eius corporis rem eveniet excepturi necessitatibus iste.
-              </p>
+            <div
+              ref={(element) => (infoRefs.current[index] = element)}
+              className="info-block ps-4"
+            >
+              <div className="title-div">
+                <p className="card-title">{image.title}</p>
+              </div>
+
+              <p className="small-title">{image.title}</p>
+              <div className="subTitle-div">
+                <h1 className="card-subTitle">{image.subTitle}</h1>
+              </div>
+              <div className="text-div">
+                <p className="card-text px-2">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Repellendus soluta vel, doloremque qui, ipsum blanditiis
+                  libero eius corporis rem eveniet excepturi necessitatibus
+                  iste.
+                </p>
+              </div>
             </div>
           </div>
         ))}

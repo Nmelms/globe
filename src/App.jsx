@@ -10,10 +10,12 @@ import "./App.css"
 function App() {
   const [num, setNum] = useState(0)
   const myDivRefs = useRef([])
+  const infoRefs = useRef([])
   let imgArr = [
     {
       url: "src/assets/cappadocia-2000w.webp",
       subTitle: "Göreme Valley",
+      smallTitle: "Göreme Valley",
       title: "North Carolina - United States",
     },
     {
@@ -32,6 +34,7 @@ function App() {
       <div className="slider-wrapper ">
         <CardSlider
           myDivRefs={myDivRefs}
+          infoRefs={infoRefs}
           num={num}
           setNum={setNum}
           images={images}
@@ -42,6 +45,7 @@ function App() {
             num={num}
             setNum={setNum}
             myDivRefs={myDivRefs}
+            infoRefs={infoRefs}
           ></SliderBtns>
         </div>
       </div>
