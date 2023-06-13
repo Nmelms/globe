@@ -46,6 +46,23 @@ function App() {
 
   return (
     <>
+      <div className="home-block full-screen">
+        <div className="title-div">
+          <p className="home-title">North Carolina - United States</p>
+        </div>
+
+        <div className="subTitle-div">
+          <h1 className="home-subTitle">North Carolina - United States</h1>
+        </div>
+
+        <div className="text-div">
+          <p className="home-text px-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Repellendus soluta vel, doloremque qui, ipsum blanditiis libero eius
+            corporis rem eveniet excepturi necessitatibus iste.
+          </p>
+        </div>
+      </div>
       <div className="slider-wrapper ">
         <CardSlider
           myDivRefs={myDivRefs}

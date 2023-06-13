@@ -19,6 +19,11 @@
   color: white;
   font-size: 1rem;
 }
+.home-title {
+  margin: 0;
+  animation: 0.5s ease-out 0s 1 slideUp;
+  font-size: 1rem;
+}
 .full-screen .card-title {
   transform: translateY(0px);
   transition: transform 0.5s;
@@ -26,6 +31,11 @@
 .card-subTitle {
   text-transform: uppercase;
   padding: 0.5rem;
+}
+.home-subTitle {
+  visibility: hidden;
+  margin: 0;
+  animation: slideUp 0.5s ease-out 0.15s 1 forwards;
 }
 .bottom-wrapper {
   width: 100%;
@@ -149,6 +159,12 @@ div.image-card.full-screen {
   color: white;
   transform: translateY(200px);
 }
+.home-text {
+  visibility: hidden;
+  font-size: 1rem;
+  color: white;
+  animation: slideUp 0.5s ease-out 0.3s 1 forwards;
+}
 .full-screen .card-text {
   transform: translateY(0);
   transition: transform 0.5s;
@@ -240,6 +256,32 @@ div.image-card.full-screen .info-block h1 {
   bottom: 8%;
   color: white;
 }
+.home-block {
+  color: white;
+  max-height: 500px;
+  height: fit-content;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 40px;
+  text-align: center;
+  width: 100vw;
+  position: relative;
+  top: 5%;
+  padding: 1rem 1rem 1rem 4rem;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(200px);
+    visibility: visible;
+  }
+  to {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
 @media screen and (min-width: 996px) {
   .bottom-wrapper {
     width: 60vw !important;
@@ -315,5 +357,9 @@ div.image-card.full-screen .info-block h1 {
     position: relative;
     left: 0;
     width: min-content;
+  }
+  .small-title2 {
+    font-size: 20px;
+    bottom: 5%;
   }
 }
