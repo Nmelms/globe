@@ -75,7 +75,7 @@
   overflow: hidden;
 }
 .card-slider {
-  left: 30%;
+  left: 40%;
   position: relative;
   z-index: 100;
   max-width: 500px;
@@ -193,10 +193,10 @@ div.image-card.full-screen .info-block h1 {
   transition-delay: 0.15s;
   font-size: 30px;
   height: fit-content;
-  max-height: 100px;
+  max-height: 200px;
 }
 .info-block h1 {
-  transform: translateY(100px);
+  transform: translateY(200px);
   overflow: hidden;
   height: 0;
   max-height: 0;
@@ -240,36 +240,44 @@ div.image-card.full-screen .info-block h1 {
   bottom: 8%;
   color: white;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 996px) {
   .bottom-wrapper {
+    width: 60vw !important;
+    max-width: 60vw !important;
+    left: 20%;
+    position: relative;
+    flex-direction: row-reverse;
     justify-content: space-between;
-    max-width: 50vw !important;
   }
   .bar-wrapper {
     width: 30vw;
-    left: 60%;
+    left: auto;
     bottom: 17%;
   }
   .slider-wrapper {
     height: fit-content;
     position: absolute;
     justify-self: flex-end;
-    bottom: 10%;
+    bottom: 20%;
   }
   .card-slider {
     position: relative;
     z-index: 100;
     height: 350px;
+    min-height: fit-content;
     max-width: 500px;
     display: flex;
   }
   .card-title {
-    font-size: 8px;
+    font-size: 1.5rem;
     height: auto;
     width: 100vw;
   }
   .card-subTitle {
     width: 100%;
+  }
+  div.image-card.full-screen .info-block h1 {
+    font-size: calc(2.5rem + 1.5vw);
   }
   .image-card {
     position: relative;
@@ -292,7 +300,7 @@ div.image-card.full-screen .info-block h1 {
     position: absolute;
     max-width: 40%;
     top: 20%;
-    max-height: 200px;
+    max-height: 500px;
     height: fit-content;
     margin-top: 5rem;
     display: flex;
@@ -302,5 +310,10 @@ div.image-card.full-screen .info-block h1 {
     text-align: center;
     width: 100vw;
     padding: 1rem 1rem 1rem 4rem;
+  }
+  .buttons {
+    position: relative;
+    left: 0;
+    width: min-content;
   }
 }

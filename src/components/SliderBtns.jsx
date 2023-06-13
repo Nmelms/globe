@@ -50,7 +50,7 @@ export default function SliderBtns({ myDivRefs, num, setNum, infoRefs }) {
   }
 
   return (
-    <div className="buttons d-flex col-12 justify-content-center align-items-center">
+    <div className="buttons d-flex col-12 col-lg-4 justify-content-center align-items-center">
       <button
         className="slider-btn d-flex align-items-center justify-content-center mx-4 col-1"
         onClick={() => handlePrevClick()}
