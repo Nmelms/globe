@@ -61,6 +61,7 @@ function App() {
             setNum={setNum}
             myDivRefs={myDivRefs}
             infoRefs={infoRefs}
+            images={imgArr}
           ></SliderBtns>
         </div>
       </div>
