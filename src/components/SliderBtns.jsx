@@ -26,11 +26,17 @@ export default function SliderBtns({
       const state4 = Flip.getState(myDivRefs.current[num + 3])
 
       myDivRefs.current[num].classList.add("full-screen")
+      if (num - 1 >= 0) {
+        myDivRefs.current[num - 1].classList.add("black-out")
+      } else {
+        let homeScreen = document.querySelector("#root")
+        homeScreen.classList.add("black-out")
+      }
 
-      Flip.from(state, { duration: 0.3 })
-      Flip.from(state2, { duration: 0.3, ease: "back.out(1)", delay: 0.005 })
-      Flip.from(state3, { duration: 0.3, ease: "back.out(1)", delay: 0.05 })
-      Flip.from(state4, { duration: 0.3, ease: "back.out(1)", delay: 0.1 })
+      Flip.from(state, { duration: 0.5, ease: "circ.inOut" })
+      Flip.from(state2, { duration: 0.5, ease: "back.out(1)", delay: 0.01 })
+      Flip.from(state3, { duration: 0.5, ease: "back.out(1)", delay: 0.1 })
+      Flip.from(state4, { duration: 0.5, ease: "back.out(1)", delay: 0.2 })
     }
   }
 
@@ -45,6 +51,14 @@ export default function SliderBtns({
       const state4 = Flip.getState(myDivRefs.current[updatedNum + 3])
 
       myDivRefs.current[updatedNum].classList.remove("full-screen")
+      if (updatedNum > 0) {
+        myDivRefs.current[num - 1].classList.remove("black-out")
+      } else {
+        let homeScreen = document.querySelector("#root")
+        homeScreen.classList.remove("black-out")
+      }
+
+      myDivRefs.current[updatedNum - 1].classList.remove("black-out")
 
       Flip.from(state, {
         duration: 0.3,

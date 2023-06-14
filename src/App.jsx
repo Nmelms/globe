@@ -1,9 +1,9 @@
 import { useState, useRef } from "react"
-import NavBar from "./components/navBar"
 import CardSlider from "./components/CardSlider"
 import SliderBtns from "./components/SliderBtns"
 import Bar from "./components/Bar"
 import { gsap } from "gsap"
+import NavBar from "./components/NavBar.jsx"
 
 import "./App.css"
 
@@ -46,22 +46,26 @@ function App() {
 
   return (
     <>
-      <div className="home-block full-screen">
+      <NavBar />
+      <div className="home-block ps-4">
         <div className="title-div">
           <p className="home-title">North Carolina - United States</p>
         </div>
 
         <div className="subTitle-div">
-          <h1 className="home-subTitle">North Carolina - United States</h1>
+          <h1 className="home-subTitle">Göreme Valley</h1>
         </div>
 
         <div className="text-div">
-          <p className="home-text px-2">
+          <p className="home-text px-2 m-0">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Repellendus soluta vel, doloremque qui, ipsum blanditiis libero eius
             corporis rem eveniet excepturi necessitatibus iste.
           </p>
         </div>
+        <button className="mt-5 discover-btn rounded-pill">
+          Discover Location
+        </button>
       </div>
       <div className="slider-wrapper ">
         <CardSlider

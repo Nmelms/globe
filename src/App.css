@@ -1,7 +1,7 @@
 #root {
   position: relative;
   overflow: hidden;
-  display: flex;
+  /* display: flex; */
   /* flex-direction: column; */
 
   background-repeat: no-repeat;
@@ -14,6 +14,39 @@
   font-family: "Abel", sans-serif;
   font-family: "Lato", sans-serif;
 }
+.black-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.black-out::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation-name: blackOut;
+  animation-duration: 0.5s; /* Duration of the animation */
+  animation-fill-mode: forwards;
+}
+.discover-btn {
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  width: auto;
+  background-color: transparent;
+  border-radius: 50%;
+  /* animation: btnHover 0.3s ease-out 0s 1 reverse; */
+  transition: background-color 0.3s ease-out;
+  border: 2px solid white;
+}
+.discover-btn:hover {
+  /* animation: btnHover 0.3s ease-out 0s 1 forwards; */
+  background-color: rgba(255, 255, 255, 0.3);
+}
+@keyframes identifier {
+}
 .card-title {
   transform: translateY(100px);
   color: white;
@@ -25,18 +58,20 @@
   font-size: 1rem;
 }
 .full-screen .card-title {
-  transform: translateY(0px);
-  transition: transform 0.5s;
+  animation: slideUp 0.5s ease-out 0s 1 forwards;
 }
 .card-subTitle {
   text-transform: uppercase;
   padding: 0.5rem;
 }
 .home-subTitle {
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   visibility: hidden;
-  margin: 0;
+  padding: 0.5rem;
   animation: slideUp 0.5s ease-out 0.15s 1 forwards;
 }
+
 .bottom-wrapper {
   width: 100%;
   position: relative;
@@ -204,15 +239,15 @@ div.image-card.full-screen .info-block {
   overflow: hidden;
 }
 div.image-card.full-screen .info-block h1 {
-  transform: translateY(0px);
-  transition: transform 0.5s;
+  animation: slideUp 0.5s ease-out 0.15s 1 forwards;
   transition-delay: 0.15s;
   font-size: 30px;
   height: fit-content;
   max-height: 200px;
 }
 .info-block h1 {
-  transform: translateY(200px);
+  visibility: hidden;
+  /* transform: translateY(200px); */
   overflow: hidden;
   height: 0;
   max-height: 0;
@@ -225,17 +260,19 @@ div.image-card.full-screen .info-block h1 {
   position: fixed;
   top: 0;
   left: 0;
-  height: 10vh;
-  color: white;
-  display: flex;
-  width: 100vw;
+  z-index: 1000;
   background-color: transparent;
 }
-.NavBar ul {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
+.NavBar a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px black;
 }
+.globe-icon {
+  padding-right: 0.5rem;
+}
+
 .full-screen .small-title1 {
   display: none;
 }
@@ -269,19 +306,46 @@ div.image-card.full-screen .info-block h1 {
   width: 100vw;
   position: relative;
   top: 5%;
-  padding: 1rem 1rem 1rem 4rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 @keyframes slideUp {
   from {
-    transform: translateY(200px);
-    visibility: visible;
+    transform: translateY(500px);
+    visibility: hidden;
   }
   to {
     transform: translateY(0);
     visibility: visible;
   }
 }
+@keyframes blackOut {
+  from {
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0
+    ); /* Starting background color with no opacity */
+  }
+  to {
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.8
+    ); /* Ending background color with opacity */
+  }
+}
+@keyframes btnHover {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
 @media screen and (min-width: 996px) {
   .bottom-wrapper {
     width: 60vw !important;
@@ -361,5 +425,28 @@ div.image-card.full-screen .info-block h1 {
   .small-title2 {
     font-size: 20px;
     bottom: 5%;
+  }
+  .home-block {
+    position: absolute;
+    max-width: 40%;
+    top: 20%;
+    max-height: 500px;
+    height: fit-content;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px;
+    text-align: center;
+    width: 100vw;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  .home-block h1 {
+    font-size: calc(2.5rem + 1.5vw);
+    text-transform: uppercase;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .home-title {
+    font-size: 1.5rem;
   }
 }

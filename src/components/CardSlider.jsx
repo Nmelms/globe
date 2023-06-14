@@ -43,6 +43,9 @@ export default function CardSlider({
                   iste.
                 </p>
               </div>
+              <button className="mt-5 discover-btn rounded-pill">
+                Discover Location
+              </button>
             </div>
           </div>
         ))}
