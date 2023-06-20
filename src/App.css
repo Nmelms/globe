@@ -371,17 +371,8 @@ div.image-card.full-screen .info-block h1 {
     background-color: rgba(255, 255, 255, 0.3);
   }
 }
-@media (hover: hover) {
-  button {
-    background-color: transparent;
-    transition: background-color 0.3s ease-out;
-  }
-  button:hover {
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-}
-@media (hover: none) {
+
+/* @media (hover: none) {
   button {
     background-color: transparent;
     transition: background-color 0.3s ease-out;
@@ -390,8 +381,18 @@ div.image-card.full-screen .info-block h1 {
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.3);
   }
-}
+} */
 @media screen and (min-width: 996px) {
+  @media (hover: hover) {
+    button {
+      background-color: transparent;
+      transition: background-color 0.3s ease-out;
+    }
+    button:hover {
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
   .card-slider {
     left: 40%;
   }
