@@ -33,6 +33,9 @@
 .btn-wrapper {
   overflow: hidden;
 }
+button {
+  background-color: transparent;
+}
 .discover-btn {
   visibility: hidden;
 }
@@ -41,16 +44,13 @@
   font-size: 1.5rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   width: auto;
-  background-color: transparent;
+
   border-radius: 50%;
   animation: slideUp 0.5s ease-out 0.4s 1 forwards;
-  transition: background-color 0.3s ease-out;
+
   border: 2px solid white;
 }
-.full-screen .discover-btn:hover {
-  /* animation: btnHover 0.3s ease-out 0s 1 forwards; */
-  background-color: rgba(255, 255, 255, 0.3);
-}
+
 @keyframes identifier {
 }
 .card-title {
@@ -74,6 +74,7 @@
   border: 2px solid white;
   animation: 0.5s ease-out 0.4s 1 slideUp forwards;
 }
+
 .home-discover-btn:hover {
   /* animation: btnHover 0.3s ease-out 0s 1 forwards; */
   cursor: pointer;
@@ -372,7 +373,16 @@ div.image-card.full-screen .info-block h1 {
     background-color: rgba(255, 255, 255, 0.3);
   }
 }
-
+@media (hover: hover) {
+  button {
+    background-color: transparent;
+    transition: background-color 0.3s ease-out;
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
 @media screen and (min-width: 996px) {
   .card-slider {
     left: 40%;
