@@ -13,30 +13,30 @@ function App() {
   const infoRefs = useRef([])
   let imgArr = [
     {
-      url: "src/assets/cappadocia-2000w.webp",
+      url: "public/assets/cappadocia-2000w.webp",
       subTitle: "Göreme Valley",
       smallTitle: "Göreme Valley",
       title: "North Carolina - United States",
     },
     {
-      url: "src/assets/japan-alps-2000w.webp",
+      url: "public/assets/japan-alps-2000w.webp",
       subTitle: "Marrakech Merzouga",
       title: "South Dakota - United States",
     },
     {
-      url: "src/assets/los-lances-2000w.webp",
+      url: "public/assets/los-lances-2000w.webp",
       subTitle: "Göreme Valley",
       smallTitle: "Göreme Valley",
       title: "North Carolina - United States",
     },
     {
-      url: "src/assets/morocco-2000w.webp",
+      url: "public/assets/morocco-2000w.webp",
       subTitle: "Göreme Valley",
       smallTitle: "Göreme Valley",
       title: "North Carolina - United States",
     },
     {
-      url: "src/assets/mushroom.jpeg",
+      url: "public/assets/mushroom.jpeg",
       subTitle: "Göreme Valley",
       smallTitle: "Göreme Valley",
       title: "North Carolina - United States",
