@@ -63,9 +63,11 @@ function App() {
             corporis rem eveniet excepturi necessitatibus iste.
           </p>
         </div>
-        <button className="mt-5 discover-btn rounded-pill">
-          Discover Location
-        </button>
+        <div className="mt-5 btn-wrapper">
+          <button className="home-discover-btn rounded-pill">
+            Discover Location
+          </button>
+        </div>
       </div>
       <div className="slider-wrapper ">
         <CardSlider

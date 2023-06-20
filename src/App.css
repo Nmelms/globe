@@ -30,18 +30,24 @@
   animation-duration: 0.5s; /* Duration of the animation */
   animation-fill-mode: forwards;
 }
+.btn-wrapper {
+  overflow: hidden;
+}
 .discover-btn {
+  visibility: hidden;
+}
+.full-screen .discover-btn {
   color: white;
   font-size: 1.5rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   width: auto;
   background-color: transparent;
   border-radius: 50%;
-  /* animation: btnHover 0.3s ease-out 0s 1 reverse; */
+  animation: slideUp 0.5s ease-out 0.4s 1 forwards;
   transition: background-color 0.3s ease-out;
   border: 2px solid white;
 }
-.discover-btn:hover {
+.full-screen .discover-btn:hover {
   /* animation: btnHover 0.3s ease-out 0s 1 forwards; */
   background-color: rgba(255, 255, 255, 0.3);
 }
@@ -52,11 +58,30 @@
   color: white;
   font-size: 1rem;
 }
+
+.home-discover-btn {
+  visibility: hidden;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  width: auto;
+  background-color: transparent;
+  border-radius: 50%;
+  animation: slideUp 0.5s ease-out 0.4s 1 forwards;
+  transition: background-color 0.3s ease-out;
+  border: 2px solid white;
+  animation: 0.5s ease-out 0.4s 1 slideUp forwards;
+}
+.home-discover-btn:hover {
+  /* animation: btnHover 0.3s ease-out 0s 1 forwards; */
+  background-color: rgba(255, 255, 255, 0.3);
+}
 .home-title {
   margin: 0;
   animation: 0.5s ease-out 0s 1 slideUp;
   font-size: 1rem;
 }
+
 .full-screen .card-title {
   animation: slideUp 0.5s ease-out 0s 1 forwards;
 }
@@ -198,12 +223,12 @@ div.image-card.full-screen {
   visibility: hidden;
   font-size: 1rem;
   color: white;
-  animation: slideUp 0.5s ease-out 0.3s 1 forwards;
+  animation: slideUp 0.3s ease-out 0.4s 1 forwards;
 }
 .full-screen .card-text {
   transform: translateY(0);
   transition: transform 0.5s;
-  transition-delay: 0.3s;
+  transition-delay: 0.4s;
   height: fit-content !important;
 }
 div.image-card.full-screen {
@@ -305,7 +330,6 @@ div.image-card.full-screen .info-block h1 {
   text-align: center;
   width: 100vw;
   position: relative;
-  top: 5%;
   padding: 1rem 1rem 1rem 1rem;
 }
 

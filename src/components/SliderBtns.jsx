@@ -52,13 +52,11 @@ export default function SliderBtns({
 
       myDivRefs.current[updatedNum].classList.remove("full-screen")
       if (updatedNum > 0) {
-        myDivRefs.current[num - 1].classList.remove("black-out")
+        myDivRefs.current[updatedNum - 1].classList.remove("black-out")
       } else {
         let homeScreen = document.querySelector("#root")
         homeScreen.classList.remove("black-out")
       }
-
-      myDivRefs.current[updatedNum - 1].classList.remove("black-out")
 
       Flip.from(state, {
         duration: 0.3,
