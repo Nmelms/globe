@@ -381,6 +381,16 @@ div.image-card.full-screen .info-block h1 {
     background-color: rgba(255, 255, 255, 0.3);
   }
 }
+@media (hover: none) {
+  button {
+    background-color: transparent;
+    transition: background-color 0.3s ease-out;
+  }
+  button:active {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
 @media screen and (min-width: 996px) {
   .card-slider {
     left: 40%;
