@@ -46,48 +46,11 @@ function App() {
 
   return (
     <>
-      <NavBar />
-      <div className="home-block ps-4">
-        <div className="title-div">
-          <p className="home-title">North Carolina - United States</p>
-        </div>
-
-        <div className="subTitle-div">
-          <h1 className="home-subTitle">Göreme Valley</h1>
-        </div>
-
-        <div className="text-div">
-          <p className="home-text px-2 m-0">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Repellendus soluta vel, doloremque qui, ipsum blanditiis libero eius
-            corporis rem eveniet excepturi necessitatibus iste.
-          </p>
-        </div>
-        <div className="mt-5 btn-wrapper">
-          <button className="home-discover-btn rounded-pill">
-            Discover Location
-          </button>
-        </div>
-      </div>
-      <div className="slider-wrapper ">
-        <CardSlider
-          myDivRefs={myDivRefs}
-          infoRefs={infoRefs}
-          num={num}
-          setNum={setNum}
-          images={images}
-        ></CardSlider>
-        <div className="bottom-wrapper d-flex justify-content-center container row">
-          <Bar num={num} imgArr={imgArr}></Bar>
-          <SliderBtns
-            num={num}
-            setNum={setNum}
-            myDivRefs={myDivRefs}
-            infoRefs={infoRefs}
-            images={imgArr}
-          ></SliderBtns>
-        </div>
-      </div>
+      <iframe
+        src="https://conditvr.com/Okuma/presentation/home.html"
+        title="W3Schools Free Online Web Tutorials"
+        style={{ width: "100vw", height: "100vh" }}
+      ></iframe>
     </>
   )
 }
