@@ -14,32 +14,32 @@ function App() {
   let imgArr = [
     {
       url: "/assets/cappadocia-2000w.webp",
-      subTitle: "Göreme Valley",
-      smallTitle: "Göreme Valley",
-      title: "North Carolina - United States",
+      subTitle: "Great Smoky Mountains",
+      smallTitle: "Great Smoky Mountains",
+      title: "Tennessee - United States",
     },
     {
       url: "/assets/japan-alps-2000w.webp",
-      subTitle: "Marrakech Merzouga",
-      title: "South Dakota - United States",
+      subTitle: "Yellowstone ",
+      title: "Montana - United States",
     },
     {
       url: "/assets/los-lances-2000w.webp",
-      subTitle: "Göreme Valley",
-      smallTitle: "Göreme Valley",
-      title: "North Carolina - United States",
+      subTitle: "Yosemite ",
+      smallTitle: "Yosemite ",
+      title: "California - United States",
     },
     {
       url: "/assets/morocco-2000w.webp",
-      subTitle: "Göreme Valley",
-      smallTitle: "Göreme Valley",
-      title: "North Carolina - United States",
+      subTitle: "Grand Canyon",
+      smallTitle: "Grand Canyon",
+      title: "Arizona - United States",
     },
     {
       url: "/assets/mushroom.jpeg",
-      subTitle: "Göreme Valley",
-      smallTitle: "Göreme Valley",
-      title: "North Carolina - United States",
+      subTitle: "Zion ",
+      smallTitle: "Zion ",
+      title: "Utah - United States",
     },
   ]
   const [images, setImages] = useState(imgArr)
